@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Offset Updater (Privacy Edition)</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        background: #0f172a;
+        color: #e5e7eb;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .box {
+        max-width: 650px;
+        width: 100%;
+        margin: 20px;
+        background: #111827;
+        padding: 30px 28px;
+        border-radius: 28px;
+        border: 1px solid #1f2937;
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+        transition: all 0.2s;
+    }
+    h2 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 1.8rem;
+    }
+    p {
+        line-height: 1.5;
+        margin: 10px 0;
+    }
+    label {
+        font-weight: 600;
+        display: block;
+        margin: 20px 0 6px 0;
+        font-size: 0.95rem;
+    }
+    .version-radio-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        margin: 12px 0 5px;
+        background: #0f172a;
+        padding: 16px 20px;
+        border-radius: 40px;
+        border: 1px solid #1f2937;
+    }
+    .version-radio-group label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #0b1220;
+        padding: 8px 18px;
+        border-radius: 40px;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-weight: normal;
+        margin: 0;
+        border: 1px solid #1f2937;
+    }
+    .version-radio-group label:hover {
+        background: #1e293b;
+        border-color: #3b82f6;
+    }
+    .version-radio-group input[type="radio"] {
+        margin: 0;
+        width: auto;
+        accent-color: #2563eb;
+        transform: scale(1.1);
+    }
+    input[type="file"], textarea, button {
+        width: 100%;
+        padding: 12px 16px;
+        margin-top: 6px;
+        border-radius: 40px;
+        font-size: 1rem;
+        background: #0b1220;
+        border: 1px solid #1f2937;
+        color: #fff;
+        transition: 0.2s;
+        font-family: inherit;
+    }
+    textarea {
+        border-radius: 20px;
+        resize: vertical;
+        font-family: monospace;
+        font-size: 0.9rem;
+    }
+    input[type="file"] {
+        padding: 10px 12px;
+        cursor: pointer;
+    }
+    input[type="file"]::file-selector-button {
+        background: #1e293b;
+        border: none;
+        border-radius: 30px;
+        padding: 8px 16px;
+        color: #e5e7eb;
+        margin-right: 12px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    input[type="file"]::file-selector-button:hover {
+        background: #334155;
+    }
+    button {
+        background: #2563eb;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+    button:hover {
+        background: #1d4ed8;
+        transform: scale(1.01);
+    }
+    .radio-group {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 15px 0 5px;
+        background: #0f172a;
+        padding: 16px 20px;
+        border-radius: 40px;
+        border: 1px solid #1f2937;
+    }
+    .radio-group label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: normal;
+        margin: 0;
+        cursor: pointer;
+    }
+    .radio-group input[type="radio"] {
+        width: auto;
+        margin: 0;
+        transform: scale(1.1);
+        accent-color: #2563eb;
+    }
+    .method-section {
+        margin-top: 10px;
+    }
+    .note {
+        font-size: 0.8rem;
+        color: #9ca3af;
+        margin-top: 28px;
+        text-align: center;
+        border-top: 1px solid #1f2937;
+        padding-top: 20px;
+    }
+    @media (max-width: 550px) {
+        body {
+            padding: 12px;
+        }
+        .box {
+            padding: 22px 18px;
+            margin: 12px;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        .version-radio-group {
+            flex-direction: column;
+            gap: 8px;
+            padding: 12px;
+        }
+        .version-radio-group label {
+            justify-content: space-between;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>🔧 Offset Updater (Privacy Edition)</h2>
+<p>Update offsets from an <strong>old version</strong> → <strong>1.6.57</strong></p>
+<p style="font-size:14px; background:#0f172a; padding:10px; border-radius:12px;">🔒 Your file/content is processed in memory. No data is ever written to the server.</p>
+<form method="post" enctype="multipart/form-data">
+    <label>Select old version:</label>
+    <div class="version-radio-group">
+                    <label>
+                <input type="radio" name="old_version" value="49"  required>
+                1.6.49            </label>
+                    <label>
+                <input type="radio" name="old_version" value="50"  required>
+                1.6.50            </label>
+                    <label>
+                <input type="radio" name="old_version" value="51"  required>
+                1.6.51            </label>
+                    <label>
+                <input type="radio" name="old_version" value="52"  required>
+                1.6.52            </label>
+                    <label>
+                <input type="radio" name="old_version" value="53"  required>
+                1.6.53            </label>
+                    <label>
+                <input type="radio" name="old_version" value="54"  required>
+                1.6.54            </label>
+                    <label>
+                <input type="radio" name="old_version" value="55"  required>
+                1.6.55            </label>
+                    <label>
+                <input type="radio" name="old_version" value="56" checked required>
+                1.6.56            </label>
+            </div>
+
+    <div id="fileSection" class="method-section">
+        <label>Select file to update:</label>
+        <input type="file" name="offset_file" accept=".txt,.cs,.h,.cpp,.c,.asm,.bin,.*">
+    </div>
+
+    <div id="pasteSection" class="method-section" style="display:none;">
+        <label>Paste content here:</label>
+        <textarea name="pasted_content" rows="12" placeholder="Paste your code containing offsets (e.g., 0x12345678) ..."></textarea>
+    </div>
+    
+    <div class="radio-group">
+        <label>
+            <input type="radio" name="input_method" value="file" checked onchange="toggleMethod()"> 📁 Upload file
+        </label>
+        <label>
+            <input type="radio" name="input_method" value="paste" onchange="toggleMethod()"> 📝 Paste content
+        </label>
+    </div>
+
+    <button>🚀 Process & Show Report</button>
+</form>
+<div class="note">After processing, you will see a detailed report — all without leaving any traces of your code.</div>
+</div>
+
+<script>
+function toggleMethod() {
+    const method = document.querySelector('input[name="input_method"]:checked').value;
+    const fileSection = document.getElementById('fileSection');
+    const pasteSection = document.getElementById('pasteSection');
+    const fileInput = document.querySelector('input[name="offset_file"]');
+    const pasteTextarea = document.querySelector('textarea[name="pasted_content"]');
+
+    if (method === 'file') {
+        fileSection.style.display = 'block';
+        pasteSection.style.display = 'none';
+        if (fileInput) fileInput.required = true;
+        if (pasteTextarea) pasteTextarea.required = false;
+    } else {
+        fileSection.style.display = 'none';
+        pasteSection.style.display = 'block';
+        if (fileInput) fileInput.required = false;
+        if (pasteTextarea) pasteTextarea.required = true;
+    }
+}
+toggleMethod();
+</script>
+<script type="module" src="https://raw.githubusercontent.com/Roxy-K373/Komag/refs/heads/main/kumag.js/kirito"></script>
+</body>
+</html>
